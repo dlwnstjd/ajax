@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<states>
+<north><state>강북구</state><state>노원구</state><state>도봉구</state></north>
+<south><state>강남구</state><state>서초구</state><state>관악구</state></south>
+<east><state>강동구</state><state>송파구</state><state>성동구</state></east>
+<west><state>강서구</state><state>구로구</state><state>양천구</state></west>
+</states>

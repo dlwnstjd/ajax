@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>시험</title>
+<link rel="stylesheet" href="css/ljs.css">
+<script type="text/javascript" src="ljs.js"></script>
+<script type="text/javascript">
+function find(f){
+	var params = "st="+f.st.value + "&find=" + f.find.value;
+	console.log(params)
+	sendRequest("ljs.jsp",params,findList,"POST");
+}
+function findList(){
+	if(ajax.readyState == 4){
+		if(ajax.status == 200){
+			list.innerHTML = ajax.responseText;
+		}else{
+			alert("서버오류:" + ajax.status + "=" + ajax.statusText);
+		}
+	}
+}
+</script>
+</head>
+<body>
+<form name="f">
+	<select name="st">
+	<option value="name">이름</option>
+	<option value="id">아이디</option>
+	<option value="position">직급</option>
+	</select>
+	<input type="text" name="find">
+	<input type="button" value="검색" onclick="find()">
+</form>
+<div id="list"></div>
+</body>
+</html>
